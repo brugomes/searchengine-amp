@@ -4,6 +4,7 @@ $dark-blue-color: #004987;
 $green-color: #79ba25;
 $orange-color: #ef6600;
 $white-color: #fff;
+$min-width: 768px;
 
 body {
     background-size: inherit;
@@ -12,7 +13,7 @@ body {
     font-family: 'Proxima Nova';
     font-weight: bold;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $min-width) {
         background-size: cover;
     }
 }
@@ -35,7 +36,7 @@ body {
     margin: 0 auto 30px;
     width: 100%;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $min-width) {
         margin: 60px auto 60px;
         max-width: 980px;
     }
@@ -50,7 +51,7 @@ body {
         margin: 0;
         padding: 0;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $min-width) {
             background: $opacity-blue-color;
             text-align: left;
             width: initial;
@@ -73,7 +74,7 @@ body {
         padding: 10px;
         position: relative;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $min-width) {
             border-radius: 0 3px 0 0;
             padding: 20px 35px;
         }
@@ -81,7 +82,7 @@ body {
         &__selo {
             display: none;
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: $min-width) {
                 display: block;
                 top: 15px;
                 right: 40px;
@@ -103,7 +104,7 @@ body {
                     font-size: 28px;
                     margin: 0 0 20px;
 
-                    @media screen and (min-width: 768px) {
+                    @media screen and (min-width: $min-width) {
                         display: block;
                     }
                 }
@@ -123,7 +124,7 @@ body {
                         position: relative;
                         width: 100%;
 
-                        @media screen and (min-width: 768px) {
+                        @media screen and (min-width: $min-width) {
                             width: 49%;
                         }
 
@@ -185,7 +186,7 @@ body {
                     &__destination {
                         margin-left: 0;
 
-                        @media screen and (min-width: 768px) {
+                        @media screen and (min-width: $min-width) {
                             margin-left: 2%;
                         }
                     }
@@ -194,7 +195,7 @@ body {
                         float: left;
                         width: 100%;
 
-                        @media screen and (min-width: 768px) {
+                        @media screen and (min-width: $min-width) {
                             width: 49%;
                         }
 
@@ -242,7 +243,7 @@ body {
                         margin-left: 0;
                         width: 100%;
 
-                        @media screen and (min-width: 768px) {
+                        @media screen and (min-width: $min-width) {
                             float: left;
                             margin-left: 2%;
                             width: 49%;
@@ -257,7 +258,7 @@ body {
                             height: 76px;
                             width: 31%;
 
-                            @media screen and (min-width: 768px) {
+                            @media screen and (min-width: $min-width) {
                                 width: 30%;
                             }
 
@@ -277,6 +278,10 @@ body {
                                 outline: 0;
                                 padding: 10px 6px;
                                 width: 100%;
+
+                                @media screen and (min-width: $min-width) {
+                                    padding: 13px 6px;
+                                }
 
                                 &:active, &:focus {
                                     border: 2px solid $orange-color;
@@ -299,7 +304,7 @@ body {
                         &__children, &__babies {
                             margin-left: 2%;
 
-                            @media screen and (min-width: 768px) {
+                            @media screen and (min-width: $min-width) {
                                 margin-left: 2.5%;
                             }
                         }
@@ -342,7 +347,7 @@ body {
         margin: 0 auto;
         max-width: 300px;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $min-width) {
             max-width: 980px;
         }
     }
@@ -362,7 +367,7 @@ body {
             max-width: 300px;
             width: 728px;
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: $min-width) {
                 max-width: initial;
             }
         }
@@ -385,7 +390,7 @@ body {
         font-size: 11px;
         margin: 19px 0;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $min-width) {
             font-size: 13px;
             margin: 16px 0;
         }
@@ -465,6 +470,9 @@ amp-date-picker[mode=overlay] .amp-date-picker-calendar-container {
 }
 
 // accordion
+amp-accordion {
+    clear: both;
+}
 
 .opcoes-busca {
     background: transparent;

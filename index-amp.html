@@ -114,20 +114,38 @@
                   <input name="inptdestination" id="inptdestination" tabindex="3" type="text" required="" placeholder="Cidade ou aeroporto" maxlength="500">
                 </label>
               </div>
+              
               <div class="travel__date">
-                <div class="travel__date--outbound">
-                  <label>
-                    <span>Data de Ida</span>
-                    <input name="departureDate" id="departureDate" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
-                  </label>
-                </div>
-
-                <div class="travel__date--inbound">
-                  <label>
-                    <span>Data de Volta</span>
-                    <input name="arrivalDate" id="arrivalDate" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
-                  </label>
-                </div>
+                  <amp-date-picker type="range" mode="overlay" id="range-date-picker"
+                        on="
+                        select:
+                          AMP.setState({
+                              dates: event.dates,
+                              startDate: event.start,
+                              endDate: event.end
+                          })"
+                        format="DD-MM-YYYY"
+                        open-after-select
+                        min="2018-07-13"
+                        start-input-selector="#range-start"
+                        end-input-selector="#range-end"
+                        locale="pt-br"
+                        class="space-between">
+  
+                        <div class="travel__date--outbound">
+                          <label>
+                            <span>Data de Ida</span>
+                            <input name="departureDate" id="range-start" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
+                          </label>
+                        </div>
+  
+                        <div class="travel__date--inbound">
+                          <label>
+                            <span>Data de Volta</span>
+                            <input name="arrivalDate" id="range-end" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
+                          </label>
+                        </div>
+                  </amp-date-picker>
               </div>
 
               <div class="travel__people">

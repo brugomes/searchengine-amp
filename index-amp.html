@@ -17,10 +17,8 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
   <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-  <script async custom-element="amp-date-picker" src="https://cdn.ampproject.org/v0/amp-date-picker-0.1.js"></script>
   <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
-  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 
   <!-- Styles -->
   <style amp-custom>body{background-image:url(./assets/background-2.jpg);background-size:cover;margin:0;font-family:'Proxima Nova';font-weight:bold}@media screen and (max-width: 767px){body{background-size:inherit}}.header{background:#fff;box-shadow:0 0 3px rgba(0,0,0,0.2);height:60px;text-align:center;width:100%}.header .logo{margin-top:10px}.search{margin:60px auto 60px;max-width:980px}@media screen and (max-width: 767px){.search{margin:0 auto 30px;width:100%}}.search__tab{background:rgba(1,100,191,0.9);border-radius:3px 3px 0 0;display:inline-block;list-style:none;margin:0;padding:0}@media screen and (max-width: 767px){.search__tab{background:#004987;text-align:center;width:100%}}.search__tab li a{color:#fff;display:block;font-size:18px;padding:10px 30px;text-decoration:none}.search__container{background:rgba(1,100,191,0.9);border-radius:0 3px 0 0;padding:20px 35px;position:relative}@media screen and (max-width: 767px){.search__container{padding:10px;border-radius:0}}.search__container__selo{top:15px;right:40px;position:absolute}@media screen and (max-width: 767px){.search__container__selo{display:none}}.search__group{border:none;margin:0;padding:0;color:#fff}.search__group__form .section__title{display:block;font-size:28px;margin:0 0 20px}@media screen and (max-width: 767px){.search__group__form .section__title{display:none}}.search__group__form .section__lbl{display:block;margin-bottom:15px}.search__group__form .section__lbl__radio-option{margin:0 5px 0 0}.search__group__form .section .travel__origin,.search__group__form .section .travel__destination{float:left;position:relative;width:49%}@media screen and (max-width: 767px){.search__group__form .section .travel__origin,.search__group__form .section .travel__destination{width:100%}}.search__group__form .section .travel__origin label,.search__group__form .section .travel__destination label{display:inline-block;margin-bottom:10px;width:100%}.search__group__form .section .travel__origin label span,.search__group__form .section .travel__destination label span{display:block;margin-bottom:4px;font-size:14px}.search__group__form .section .travel__origin label input,.search__group__form .section .travel__destination label input{background:#fff;border:2px solid transparent;border-radius:3px;color:#0164bf;font-size:13px;font-weight:bold;outline:0;padding:12px;width:-webkit-fill-available;font-family:'Proxima Nova';font-size:bold}.search__group__form .section .travel__origin label input:focus,.search__group__form .section .travel__destination label input:focus{border:2px solid #ffa600}.search__group__form .section .travel__origin .autosuggest-container,.search__group__form .section .travel__destination .autosuggest-container{z-index:9999;position:absolute;background:#fff;color:#055cb1;border-radius:3px;padding:10px 5px;width:97%;font-size:11px}.search__group__form .section .travel__origin .autosuggest-container .select-option,.search__group__form .section .travel__destination .autosuggest-container .select-option{padding:5px 5px;border-bottom:1px solid #f1f1f1}.search__group__form .section .travel__origin .autosuggest-container .select-option:hover,.search__group__form .section .travel__origin .autosuggest-container .select-option:focus,.search__group__form .section .travel__origin .autosuggest-container .select-option:active,.search__group__form .section .travel__destination .autosuggest-container .select-option:hover,.search__group__form .section .travel__destination .autosuggest-container .select-option:focus,.search__group__form .section .travel__destination .autosuggest-container .select-option:active{background:rgba(1,100,191,0.1)}.search__group__form .section .travel__origin .autosuggest-container.hidden,.search__group__form .section .travel__destination .autosuggest-container.hidden{display:none}.search__group__form .section .travel__destination{margin-left:2%}@media screen and (max-width: 767px){.search__group__form .section .travel__destination{margin-left:0}}.search__group__form .section .travel__date{float:left;width:49%}@media screen and (max-width: 767px){.search__group__form .section .travel__date{width:100%}}.search__group__form .section .travel__date--outbound,.search__group__form .section .travel__date--inbound{float:left;width:48%}.search__group__form .section .travel__date--outbound label,.search__group__form .section .travel__date--inbound label{display:inline-block;margin-bottom:10px;width:100%}.search__group__form .section .travel__date--outbound label span,.search__group__form .section .travel__date--inbound label span{display:block;margin-bottom:4px;font-size:14px}.search__group__form .section .travel__date--outbound label input,.search__group__form .section .travel__date--inbound label input{background:#fff url(assets/ico-calendar-disabled.svg) no-repeat;background-position:93% 10px;border:2px solid transparent;border-radius:3px;color:#0164bf;font-size:13px;font-weight:bold;outline:0;padding:12px;width:-webkit-fill-available}.search__group__form .section .travel__date--outbound label input:focus,.search__group__form .section .travel__date--inbound label input:focus{border:2px solid #ffa600}.search__group__form .section .travel__date--inbound{margin-left:4%}.search__group__form .section .travel__people{float:left;margin-left:2%;width:49%}@media screen and (max-width: 767px){.search__group__form .section .travel__people{margin-left:0;width:100%;float:none}}.search__group__form .section .travel__people label{display:inline-block;height:76px;width:30%}@media screen and (max-width: 767px){.search__group__form .section .travel__people label{width:31%}}.search__group__form .section .travel__people label span{display:block;margin-bottom:4px;font-size:14px}.search__group__form .section .travel__people label select{background:#004987;border:2px solid #004987;border-radius:3px;color:#fff;font-size:13px;font-weight:bold;outline:0;padding:10px 6px;width:100%}.search__group__form .section .travel__people label select:active,.search__group__form .section .travel__people label select:focus{border:2px solid #ef6600}.search__group__form .section .travel__people label small{display:block;margin-top:3px;font-size:12px}.search__group__form .section .travel__people__adults small{color:transparent}.search__group__form .section .travel__people__children,.search__group__form .section .travel__people__babies{margin-left:2.5%}@media screen and (max-width: 767px){.search__group__form .section .travel__people__children,.search__group__form .section .travel__people__babies{margin-left:2%}}.search__button__submit{background:rgba(121,186,37,0.9);border:none;border-radius:0 0 3px 3px;color:#fff;cursor:pointer;display:block;font-size:18px;font-weight:bold;padding:14px 10px;text-align:center;text-decoration:none}.search__button__submit:hover{background:#79ba25}.search__button__submit:active,.search__button__submit:focus{outline:none}.banner{margin-bottom:30px}.banner__content{margin:0 auto;max-width:980px}@media screen and (max-width: 767px){.banner__content{max-width:300px}}.banner__link{display:block;width:100%}.banner__link__img{background:#440095;border:1px solid #ededed;border-radius:2px;color:#fff;display:block;height:90px;margin:0 auto;width:728px}@media screen and (max-width: 767px){.banner__link__img{max-width:300px}}.footer{background:#f7f7f7;display:inline-block;height:50px;position:relative;bottom:0;text-align:center;width:100%}.footer .copy{color:#858585;display:block;font-size:13px;margin:16px 0}@media screen and (max-width: 767px){.footer .copy{font-size:11px;margin:19px 0}}amp-date-picker[mode=overlay] .amp-date-picker-calendar-container{top:calc(100% + 66px);left:50%;margin-left:-159px}.CalendarMonth_caption{color:#fff;background:#ffa600;padding:8px 0;margin:0 -30px 21px}.CalendarMonth_caption>*{font-weight:bold;font-size:15px}.DayPickerNavigation_button__horizontal{top:6px}.DayPicker_weekHeader{color:#7d7d7d;background:#ebebeb;top:40px;padding:0px 23px;margin-left:-10px}.DayPicker_weekHeader li{font-weight:bold}.DayPicker_transitionContainer{min-height:300px}.CalendarDay__selected_start{background-color:#0164bf;border:1px solid #0164bf}.CalendarDay__selected_end{background:#ffa600;border:1px solid #ffa600}.CalendarDay__hovered_span,.CalendarDay__hovered_span:hover,.CalendarDay__selected_span,.CalendarDay__selected_span:active,.CalendarDay__selected_span:hover{background-color:#f7f7f7;border:1px solid #f7f7f7}[type="range"] .amp-date-picker-selecting{border-bottom-color:#b60845;color:#b60845}.align-content-center,.align-content-center .amp-date-picker-calendar-container{display:flex;align-items:center;justify-content:center;flex-direction:row}.opcoes-busca{background:transparent;border:none;margin:10px 0;width:137px;padding:0}.opcoes-busca:focus{outline:none}amp-accordion section[expanded] .show-more{display:none}amp-accordion section:not([expanded]) .show-less{display:none}</style>
@@ -44,20 +42,67 @@
       <img class="search__container__selo" alt="Selo de Garantia" src="https://www.viajanet.com.br/static/assets/platform/img/economia.png">
 
       <fieldset class="search__group">
-        <form class="search__group__form" action="index.html" method="post">
+        <div class="search__group__form">
           <div class="section">
             <strong class="section__title">Encontre os melhores preços e boa viagem!</strong>
             <label class="section__lbl">
-              <input type="radio" tabindex="1" name="triptype" class="section__lbl__radio-option" id="iptRoundTrip" required>
+              <input type="radio" tabindex="1" name="triptype" class="section__lbl__radio-option" id="iptRoundTrip" required checked>
               <span>Ida e Volta</span>
             </label>
 
             <div class="travel">
               <div class="travel__origin">
                 <label>
-                  <span>Origem</span>
-                  <input name="inptorigin" id="inptorigin" tabindex="2" type="text" required="" placeholder="Cidade ou aeroporto" maxlength="500">
+                    <span>Informe sua origem</span>
+                    <input name="inptorigin" id="inptorigin" tabindex="2"
+                     type="text" required="" placeholder="Cidade ou aeroporto" on="
+                     input-debounced:
+                       AMP.setState({
+                         queryOrigin: event.value,
+                         showDropdown_origin: false,
+                         showDropdown_destination: false
+                       }),
+                       autosuggest-list.show;
+                       tap:
+                       AMP.setState({
+                        showDropdown_origin: false,
+                        showDropdown_destination: false
+                       }),
+                       autosuggest-list.show"
+                   [value]="origin_text || ''"
+                   required
+                   autocomplete="off" />
                 </label>
+                <div class="suggest">
+                    <div class="autosuggest-container hidden-origin" [class]="(showDropdown_origin == true) ?
+                        'autosuggest-container' :
+                        'autosuggest-container hidden-origin'">
+                        <amp-list class="autosuggest-box" layout="fixed-height" height="120" [src]="queryOrigin ?
+                            autosuggest.endpoint + queryOrigin : return" id="autosuggest-list"
+                            items="Locations">
+                            <template type="amp-mustache">
+                                <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container" on="
+                                    select:
+                                    AMP.setState({
+                                        origin_text: event.targetOption.split('|')[1],
+                                        origin_iata: event.targetOption.split('|')[0],
+                                        showDropdown_origin: false,
+                                        showDropdown_destination: false
+                                    }),
+                                    autosuggest-list.hide">
+                                    {{#.}}
+                                    <option class="select-option no-outline" role="option" 
+                                    tabindex="0" on="tap:autosuggest-list.hide" option="{{IATA}}|{{Name}}">{{Name}}</option>
+                                    {{/.}}
+                                </amp-selector>
+                            </template>
+                            <div placeholder>Carregando ...</div>
+                            <div fallback>Falha ao carregar a lista.</div>
+                        </amp-list>
+                    </div>
+                </div>
+            </div>
+          
               </div>
               <div class="travel__destination">
                 <label>
@@ -118,12 +163,11 @@
               </div>
             </div>
           </div>
-        </form>
       </fieldset>
     </div>
 
     <div class="search__button">
-      <a class="search__button__submit" type="button" name="button"><span>Pesquisar</span></a>
+      <a class="search__button__submit"><span>Pesquisar</span></a>
     </div>
   </div>
   <!-- Close Search -->
@@ -141,6 +185,17 @@
     <span class="copy">© 2018 ViajaNet Viagens Online - Todos os direitos reservados</span>
   </footer>
   <!-- Close Footer -->
-  
+   <!--  The initial state and helper variables are configured by amp-state.-->
+   <amp-state id="autosuggest">
+    <script type="application/json">
+        {
+        "endpoint": "/resources/api/autocomplete/",
+        "emptyAndInitialTemplateJson": [{
+            "query": "",
+            "results": []
+        }]
+        }
+    </script>
+</amp-state>
 </body>
 </html>

@@ -7,7 +7,7 @@ $white-color: #fff;
 
 body {
     background-size: inherit;
-    background-image: url(./ASSETS/background-2.jpg);
+    background-image: url(./assets/background-2.jpg);
     margin: 0;
     font-family: 'Proxima Nova';
     font-weight: bold;
@@ -176,7 +176,7 @@ body {
                                 }
                             }
 
-                            &.hidden {
+                            &.hidden-origin, &.hidden-destination {
                                 display: none;
                             }
                         }

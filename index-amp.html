@@ -74,13 +74,13 @@
                          queryOrigin: event.value,
                          showDropdown_origin: event.value.length < 3 ? '' : event.value
                        }),
-                       autosuggest-list.show;
+                       autosuggest-list-origin.show;
                       tap:
                        AMP.setState({
                         queryOrigin: queryOrigin == null ? '' : queryOrigin,
                         showDropdown_origin: true
                        }),
-                       autosuggest-list.show"
+                       autosuggest-list-origin.show"
                    [value]="origin_text || ''"
                    value=""
                    required
@@ -91,7 +91,7 @@
                         'autosuggest-container' :
                         'autosuggest-container hidden-origin'">
                         <amp-list class="autosuggest-box" layout="fixed-height" height="120" [src]="queryOrigin ?
-                            autosuggest.endpoint + queryOrigin : return" id="autosuggest-list"
+                            autosuggest.endpoint + queryOrigin : return" id="autosuggest-list-origin"
                             items="Locations">
                             <template type="amp-mustache">
                                 <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container" on="
@@ -101,10 +101,10 @@
                                         origin_iata: '{{IATA}}',
                                         showDropdown_origin: false
                                     }),
-                                    autosuggest-list.hide">
+                                    autosuggest-list-origin.hide">
                                     {{#.}}
                                     <option class="select-option no-outline" role="option" 
-                                    tabindex="0" on="tap:autosuggest-list.hide" option="{{Name}}">{{Name}}</option>
+                                    tabindex="0" on="tap:autosuggest-list-origin.hide" option="{{Name}}">{{Name}}</option>
                                     {{/.}}
                                 </amp-selector>
                             </template>
@@ -126,13 +126,13 @@
                       queryDestination: event.value,
                       showDropdown_destination: event.value.length < 3 ? '' : event.value
                     }),
-                    autosuggest-list.show;
+                    autosuggest-list-destination.show;
                   tap:
                     AMP.setState({
                      queryDestination: queryDestination == null ? '' : queryDestination,
                      showDropdown_destination: true
                     }),
-                    autosuggest-list.show"
+                    autosuggest-list-destination.show"
                     [value]="destination_text || ''"
                     value=""
                     required
@@ -143,7 +143,7 @@
                   'autosuggest-container' :
                   'autosuggest-container hidden-destination'">
                   <amp-list class="autosuggest-box" layout="fixed-height" height="120"  [src]="queryDestination ?
-                    autosuggest.endpoint + queryDestination : return" id="autosuggest-list" items="Locations">
+                    autosuggest.endpoint + queryDestination : return" id="autosuggest-list-destination" items="Locations">
                     <template type="amp-mustache">
                       <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container"
                         on="
@@ -153,10 +153,10 @@
                           destination_iata: '{{IATA}}',
                           showDropdown_origin: false
                         }),
-                        autosuggest-list.hide">
+                        autosuggest-list-destination.hide">
                         {{#.}}
                         <option class="select-option no-outline" role="option" 
-                        tabindex="0" on="tap:autosuggest-list.hide" option="{{Name}}">{{Name}}</option>
+                        tabindex="0" on="tap:autosuggest-list-destination.hide" option="{{Name}}">{{Name}}</option>
                         {{/.}}
                       </amp-selector>
                     </template>

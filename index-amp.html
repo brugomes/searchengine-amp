@@ -87,14 +87,14 @@
                                 <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container" on="
                                     select:
                                     AMP.setState({
-                                        origin_text: event.targetOption.split('|')[1],
-                                        origin_iata: event.targetOption.split('|')[0],
+                                        origin_text: event.value,
+                                        origin_iata: event.targetOption,
                                         showDropdown_origin: false
                                     }),
                                     autosuggest-list.hide">
                                     {{#.}}
                                     <option class="select-option no-outline" role="option" 
-                                    tabindex="0" on="tap:autosuggest-list.hide" option="{{IATA}}|{{Name}}">{{Name}}</option>
+                                    tabindex="0" on="tap:autosuggest-list.hide" [value]="{{IATA}}">{{Name}}</option>
                                     {{/.}}
                                 </amp-selector>
                             </template>
@@ -109,8 +109,49 @@
               <div class="travel__destination">
                 <label>
                   <span>Destino</span>
-                  <input name="inptdestination" id="inptdestination" tabindex="3" type="text" required="" placeholder="Cidade ou aeroporto" maxlength="500">
+                  <input name="inptdestination" id="inptdestination" tabindex="3"
+                    type="text" required="" placeholder="Cidade ou aeroporto" on="
+                  input-debounced:
+                    AMP.setState({
+                      queryDestination: event.value,
+                      showDropdown_destination: event.value.length < 3 ? '' : event.value
+                    }),
+                    autosuggest-list.show;
+                  tap:
+                    AMP.setState({
+                     queryDestination: queryDestination == null ? '' : queryDestination,
+                     showDropdown_destination: true
+                    }),
+                    autosuggest-list.show"
+                    [value]="destination_text || ''"
+                    required
+                    autocomplete="off" />
                 </label>
+                <div class="suggest">
+                  <div class="autosuggest-container hidden-destination" [class]="(showDropdown_destination && queryDestination) ?
+                  'autosuggest-container' :
+                  'autosuggest-container hidden-destination'">
+                  <amp-list class="autosuggest-box" layout="fixed-height" height="120"  [src]="queryDestination ?
+                    autosuggest.endpoint + queryDestination : return" id="autosuggest-list" items="Locations">
+                    <template type="amp-mustache">
+                      <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container"
+                        on="
+                        select:
+                        AMP.setState({
+                          destination_text: event.targetOption,
+                          destination_iata: event.value,
+                          showDropdown_origin: false
+                        }),
+                        autosuggest-list.hide">
+                        {{#.}}
+                        <option class="select-option no-outline" role="option" tabindex="0" value=""
+                        on="tap:autosuggest-list.hide" [value]="IATA">{{Name}}</option>
+                        {{/.}}
+                      </amp-selector>
+                    </template>
+                  </amp-list>
+                  </div>
+                </div>
               </div>
               
               <div class="travel__date">

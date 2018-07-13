@@ -168,7 +168,19 @@
                   </div>
                 </div>
               </div>
-              
+              <div class="travel__date--outbound">
+                  <label>
+                    <span>Data de Ida</span>
+                    <input name="departureDate" id="range-start" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
+                  </label>
+                </div>
+
+                <div class="travel__date--inbound">
+                  <label>
+                    <span>Data de Volta</span>
+                    <input name="arrivalDate" id="range-end" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
+                  </label>
+                </div>
               <div class="travel__date">
                   <amp-date-picker type="range" mode="overlay" id="range-date-picker"
                         on="
@@ -185,20 +197,7 @@
                         end-input-selector="#range-end"
                         locale="pt-br"
                         class="space-between">
-  
-                        <div class="travel__date--outbound">
-                          <label>
-                            <span>Data de Ida</span>
-                            <input name="departureDate" id="range-start" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
-                          </label>
-                        </div>
-  
-                        <div class="travel__date--inbound">
-                          <label>
-                            <span>Data de Volta</span>
-                            <input name="arrivalDate" id="range-end" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
-                          </label>
-                        </div>
+                     
                   </amp-date-picker>
               </div>
 
@@ -286,7 +285,8 @@
     </div>
 
     <div class="search__button">
-      <a class="search__button__submit"><span>Pesquisar</span></a>
+        <a class="search__button__submit" target="_self"
+        [href]="'/busca/voos-resultados#/'+ (origin_iata || 'SAO')  + '/' + (destination_iata || 'RIO') + '/RT/' + (startDate == null ? '-' : startDate.date)  + '/' + (endDate == null ? '-' : endDate.date) + '/' + (horarioIda || '-') + '/' + (horarioVolta || '-') + '/' + (tipoClasse || '-')  + '/' + (adultPassenger || 1) +'/'+ (childPassenger || 0) +'/'+ (infantPassenger || 0) +'/-/-/-/-'" name="button"><span>Pesquisar</span></a>
     </div>
   </div>
   <!-- Close Search -->

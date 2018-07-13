@@ -26,191 +26,179 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="header">
-    <amp-img class="logo" width="106" height="41" src="https://www.viajanet.com.br/static/assets/platform/img/logo.svg;wac995548723fe915d" alt="ViajaNet" title="ViajaNet">
-      <noscript>
-        <img src="https://www.viajanet.com.br/static/assets/platform/img/logo.svg;wac995548723fe915d"
-        width="106" height="41" alt="ViajaNet" title="ViajaNet" />
-      </noscript>
-    </amp-img>
-  </header>
-  <!-- Close Header -->
 
-  <!-- Search -->
-  <div class="search">
-    <ul class="search__tab">
-      <li> <a href="#" class="search__tab__btn"> <span>Passagens Aéreas</span> </a> </li>
-    </ul>
+    <!-- Header -->
+    <header class="header">
+        <amp-img class="logo" width="106" height="41" src="https://www.viajanet.com.br/static/assets/platform/img/logo.svg;wac995548723fe915d" alt="ViajaNet" title="ViajaNet">
+            <noscript>
+                <img src="https://www.viajanet.com.br/static/assets/platform/img/logo.svg;wac995548723fe915d"
+                     width="106" height="41" alt="ViajaNet" title="ViajaNet" />
+            </noscript>
+        </amp-img>
+    </header>
+    <!-- Close Header -->
 
-    <div class="search__container">
-      <amp-img class="search__container__selo" width="86" height="86" alt="Selo de Garantia" src="https://www.viajanet.com.br/static/assets/platform/img/economia.png">
-        <noscript>
-          <img src="https://www.viajanet.com.br/static/assets/platform/img/economia.png"
-          width="86" height="86" alt="ViajaNet" title="ViajaNet" />
-        </noscript>
-      </amp-img>
+    <!-- Search -->
+    <div class="search">
+        <ul class="search__tab">
+            <li> <a href="#" class="search__tab__btn"> <span>Passagens Aéreas</span> </a> </li>
+        </ul>
 
-      <fieldset class="search__group">
-        <div class="search__group__form">
-          <div class="section">
-            <strong class="section__title">Encontre os melhores preços e boa viagem!</strong>
-            <label class="section__lbl">
-              <input type="radio" tabindex="1" name="triptype" class="section__lbl__radio-option" id="iptRoundTrip" required checked>
-              <span>Ida e Volta</span>
-            </label>
+        <div class="search__container">
+            <amp-img class="search__container__selo" width="86" height="86" alt="Selo de Garantia" src="https://www.viajanet.com.br/static/assets/platform/img/economia.png">
+                <noscript>
+                    <img src="https://www.viajanet.com.br/static/assets/platform/img/economia.png"
+                         width="86" height="86" alt="ViajaNet" title="ViajaNet" />
+                </noscript>
+            </amp-img>
 
-            <div class="travel">
-              <div class="travel__origin">
-                <label>
-                    <span>Informe sua origem</span>
-                    <input name="inptorigin" id="inptorigin" tabindex="2"
-                     type="text" required="" placeholder="Cidade ou aeroporto" on="
-                     input-debounced:
-                       AMP.setState({
-                         queryOrigin: event.value,
-                         showDropdown_origin: event.value.length < 3 ? '' : event.value
-                       }),
-                       autosuggest-list-origin.show;
-                      tap:
-                       AMP.setState({
-                        queryOrigin: queryOrigin == null ? '' : queryOrigin,
-                        showDropdown_origin: true
-                       }),
-                       autosuggest-list-origin.show"
-                   [value]="origin_text || ''"
-                   value=""
-                   required
-                   autocomplete="off" />
-                </label>
-                <div class="suggest">
-                    <div class="autosuggest-container hidden-origin" [class]="(showDropdown_origin && queryOrigin) ?
+            <fieldset class="search__group">
+                <div class="search__group__form">
+                    <div class="section">
+                        <strong class="section__title">Encontre os melhores preços e boa viagem!</strong>
+                        <label class="section__lbl">
+                            <input type="radio" tabindex="1" name="triptype" class="section__lbl__radio-option" id="iptRoundTrip" required checked>
+                            <span>Ida e Volta</span>
+                        </label>
+
+                        <div class="travel">
+                            <div class="travel__origin">
+                                <label>
+                                    <span>Informe sua origem</span>
+                                    <input name="inptorigin" id="inptorigin" tabindex="2"
+                                           type="text" required="" placeholder="Cidade ou aeroporto" on="
+                                           input-debounced:
+                                           AMP.setState({
+                                           queryOrigin: event.value,
+                                           showDropdown_origin: event.value.length < 3 ? '' : event.value
+                                    }),
+                                    autosuggest-list-origin.show;
+                                    tap:
+                                    AMP.setState({
+                                    queryOrigin: queryOrigin == null ? '' : queryOrigin,
+                                    showDropdown_origin: true
+                                    }),
+                                    autosuggest-list-origin.show"
+                                    [value]="origin_text || ''"
+                                    value=""
+                                    required
+                                    autocomplete="off" />
+                                </label>
+                                <div class="suggest">
+                                    <div class="autosuggest-container hidden-origin" [class]="(showDropdown_origin && queryOrigin) ?
                         'autosuggest-container' :
                         'autosuggest-container hidden-origin'">
-                        <amp-list class="autosuggest-box" layout="fixed-height" height="120" [src]="queryOrigin ?
+                                        <amp-list class="autosuggest-box" layout="fixed-height" height="120" [src]="queryOrigin ?
                             autosuggest.endpoint + queryOrigin : return" id="autosuggest-list-origin"
-                            items="Locations">
-                            <template type="amp-mustache">
-                                <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container" on="
+                                                  items="Locations">
+                                            <template type="amp-mustache">
+                                                <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container" on="
                                     select:
                                     AMP.setState({
                                         origin_text: '{{Name}}',
                                         origin_iata: '{{IATA}}',
-                                        query: event.targetOption,
                                         showDropdown_origin: false
                                     }),
                                     autosuggest-list-origin.hide">
-                                    {{#.}}
-                                    <option class="select-option no-outline" role="option" 
-                                    tabindex="0" on="tap:autosuggest-list-origin.hide" option="{{Name}}">{{Name}}</option>
-                                    {{/.}}
-                                </amp-selector>
-                            </template>
-                            <div placeholder>Carregando ...</div>
-                            <div fallback>Falha ao carregar a lista.</div>
-                        </amp-list>
-                    </div>
-                </div>
-            </div>
-          
-              </div>
-              <div class="travel__destination">
-                <label>
-                  <span>Destino</span>
-                  <input name="inptdestination" id="inptdestination" tabindex="3"
-                    type="text" required="" placeholder="Cidade ou aeroporto" on="
-                  input-debounced:
-                    AMP.setState({
-                      queryDestination: event.value,
-                      showDropdown_destination: event.value.length < 3 ? '' : event.value
-                    }),
-                    autosuggest-list-destination.show;
-                  tap:
-                    AMP.setState({
-                     queryDestination: queryDestination == null ? '' : queryDestination,
-                     showDropdown_destination: true
-                    }),
-                    autosuggest-list-destination.show"
-                    [value]="destination_text || ''"
-                    value=""
-                    required
-                    autocomplete="off" />
-                </label>
-                <div class="suggest">
-                  <div class="autosuggest-container hidden-destination" [class]="(showDropdown_destination && queryDestination) ?
+                                                    {{#.}}
+                                                    <option class="select-option no-outline" role="option"
+                                                            tabindex="0" on="tap:autosuggest-list-origin.hide" option="{{Name}}">
+                                                        {{Name}}
+                                                    </option>
+                                                    {{/.}}
+                                                </amp-selector>
+                                            </template>
+                                            <div placeholder>Carregando ...</div>
+                                            <div fallback>Falha ao carregar a lista.</div>
+                                        </amp-list>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="travel__destination">
+                            <label>
+                                <span>Destino</span>
+                                <input name="inptdestination" id="inptdestination" tabindex="3"
+                                       type="text" required="" placeholder="Cidade ou aeroporto" on="
+                                       input-debounced:
+                                       AMP.setState({
+                                       queryDestination: event.value,
+                                       showDropdown_destination: event.value.length < 3 ? '' : event.value
+                                }),
+                                autosuggest-list-destination.show;
+                                tap:
+                                AMP.setState({
+                                queryDestination: queryDestination == null ? '' : queryDestination,
+                                showDropdown_destination: true
+                                }),
+                                autosuggest-list-destination.show"
+                                [value]="destination_text || ''"
+                                value=""
+                                required
+                                autocomplete="off" />
+                            </label>
+                            <div class="suggest">
+                                <div class="autosuggest-container hidden-destination" [class]="(showDropdown_destination && queryDestination) ?
                   'autosuggest-container' :
                   'autosuggest-container hidden-destination'">
-                  <amp-list class="autosuggest-box" layout="fixed-height" height="120"  [src]="queryDestination ?
+                                    <amp-list class="autosuggest-box" layout="fixed-height" height="120" [src]="queryDestination ?
                     autosuggest.endpoint + queryDestination : return" id="autosuggest-list-destination" items="Locations">
-                    <template type="amp-mustache">
-                      <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container"
-                        on="
+                                        <template type="amp-mustache">
+                                            <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container"
+                                                          on="
                         select:
                         AMP.setState({
                           destination_text: '{{Name}}',
                           destination_iata: '{{IATA}}',
-                          query: event.targetOption,
                           showDropdown_origin: false
                         }),
                         autosuggest-list-destination.hide">
-                        {{#.}}
-                        <option class="select-option no-outline" role="option" 
-                        tabindex="0" on="tap:autosuggest-list-destination.hide" option="{{Name}}">{{Name}}</option>
-                        {{/.}}
-                      </amp-selector>
-                    </template>
-                    <div placeholder>Carregando ...</div>
-                    <div fallback>Falha ao carregar a lista.</div>
-                  </amp-list>
-                  </div>
-                </div>
-              </div>
-              <div class="travel__date--outbound">
-                  <label>
-                    <span>Data de Ida</span>
-                    <input name="departureDate" id="range-start" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
-                  </label>
-                </div>
+                                                {{#.}}
+                                                <option class="select-option no-outline" role="option"
+                                                        tabindex="0" on="tap:autosuggest-list-destination.hide" option="{{Name}}">
+                                                    {{Name}}
+                                                </option>
+                                                {{/.}}
+                                            </amp-selector>
+                                        </template>
+                                        <div placeholder>Carregando ...</div>
+                                        <div fallback>Falha ao carregar a lista.</div>
+                                    </amp-list>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="travel__date--inbound">
-                  <label>
-                    <span>Data de Volta</span>
-                    <input name="arrivalDate" id="range-end" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
-                  </label>
-                </div>
-              <div class="travel__date">
-                  <amp-date-picker type="range" mode="overlay" id="range-date-picker"
-                        on="
-                        select:
-                          AMP.setState({
-                              dates: event.dates,
-                              startDate: event.start,
-                              endDate: event.end
-                          })"
-<<<<<<< HEAD
+                        <div class="travel__date">
+                            <div class="travel__date--outbound">
+                                <label>
+                                    <span>Data de Ida</span>
+                                    <input name="departureDate" id="range-start" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
+                                </label>
+                            </div>
+
+                            <div class="travel__date--inbound">
+                                <label>
+                                    <span>Data de Volta</span>
+                                    <input name="arrivalDate" id="range-end" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
+                                </label>
+                            </div>
+
+                            <amp-date-picker type="range" mode="overlay" id="range-date-picker"
+                                             on="
+                                              select:
+                                                AMP.setState({
+                                                    dates: event.dates,
+                                                    startDate: event.start,
+                                                    endDate: event.end
+                                                })"
                                              format="DD-MM-YYYY"
-                                             week-day-format="ddd"
                                              open-after-select
                                              min="2018-07-13"
                                              start-input-selector="#range-start"
                                              end-input-selector="#range-end"
                                              locale="pt-br"
                                              class="space-between">
-
-                                <div class="travel__date--outbound">
-                                    <label>
-                                        <span>Data de Ida</span>
-                                        <input name="departureDate" id="range-start" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
-                                    </label>
-                                </div>
-
-                                <div class="travel__date--inbound">
-                                    <label>
-                                        <span>Data de Volta</span>
-                                        <input name="arrivalDate" id="range-end" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
-                                    </label>
-                                </div>
                             </amp-date-picker>
                         </div>
 
@@ -293,138 +281,41 @@
                             </section>
                         </amp-accordion>
 
-=======
-                        format="DD-MM-YYYY"
-                        open-after-select
-                        min="2018-07-13"
-                        start-input-selector="#range-start"
-                        end-input-selector="#range-end"
-                        locale="pt-br"
-                        class="space-between">
-                     
-                  </amp-date-picker>
-              </div>
-
-              <div class="travel__people">
-                <label class="travel__people__adults">
-                  <span>Adultos</span>
-                  <select id="drpAdultsQtd" name="adultPassenger" tabindex="6" required>
-                    <option value="">1 adulto</option>
-                    <option value="">2 adultos</option>
-                    <option value="">3 adultos</option>
-                    <option value="">4 adultos</option>
-                    <option value="">5 adultos</option>
-                  </select>
-                  <small>.</small>
-                </label>
-                <label class="travel__people__children">
-                  <span>Crianças</span>
-                  <select id="drpChildrenQtd" name="childPassenger" tabindex="7" required>
-                    <option value="">Nenhuma</option>
-                    <option value="">1 criança</option>
-                    <option value="">2 crianças</option>
-                    <option value="">3 crianças</option>
-                    <option value="">4 crianças</option>
-                  </select>
-                  <small>2 a 11 anos</small>
-                </label>
-                <label class="travel__people__babies">
-                  <span>Bebês</span>
-                  <select id="drpBabiesQtd" name="infantPassenger" tabindex="8" required>
-                    <option value="">Nenhum</option>
-                    <option value="">1 bebê</option>
-                    <option value="">2 bebês</option>
-                    <option value="">3 bebês</option>
-                    <option value="">4 bebês</option>
-                  </select>
-                  <small>0 a 23 meses</small>
-                </label>
-              </div>
-
-              <amp-accordion>
-                <section>
-                    <h4 class="opcoes-busca">
-                        <span class="show-more">+</span>
-                        <span class="show-less">-</span>
-                        Opções de busca</h4>
-                   
-                    <div class="travel__people options">
-                        <label class="travel__people__adults">
-                            <span>Horário de Ida</span>
-                            <select id="drpHorarioIda" name="horarioIda" tabindex="9" required on="change:AMP.setState({horarioIda: event.value})">
-                                <option value="-">Qualquer</option>
-                                <option value="6-12">Manhã</option>
-                                <option value="12-18">Tarde</option>
-                                <option value="18-24">Noite</option>
-                                <option value="0-6">Madrugada</option>
-                            </select>
-                        </label>
-                        <label class="travel__people__children">
-                            <span>Horário de volta</span>
-                            <select id="drpHorarioVolta" name="horarioVolta" tabindex="10" required on="change:AMP.setState({horarioVolta: event.value})">
-                                <option value="-">Qualquer</option>
-                                <option value="6-12">Manhã</option>
-                                <option value="12-18">Tarde</option>
-                                <option value="18-24">Noite</option>
-                                <option value="0-6">Madrugada</option>
-                            </select>
-                        </label>
-                        <label class="travel__people__babies">
-                            <span>Classe</span>
-                            <select id="drpClasse" name="tipoClasse" tabindex="11" required on="change:AMP.setState({tipoClasse: event.value})">
-                                <option value="-">Qualquer</option>
-                                <option value="2">Econômica</option>
-                                <option value="3">Econômica Premium</option>
-                                <option value="1">Executiva</option>
-                                <option value="0">1ª Classe</option>
-                            </select>
-                        </label>
->>>>>>> 92722c08a01d4b36c690ad9a1374eac10089eeb9
                     </div>
-                </section>
-              </amp-accordion>
-
-            </div>
-          </div>
-      </fieldset>
-    </div>
-
-    <div class="search__button">
-        <a class="search__button__submit" target="_self"
-        [href]="'/busca/voos-resultados#/'+ (origin_iata || 'SAO')  + '/' + (destination_iata || 'RIO') + '/RT/' + (startDate == null ? '-' : startDate.date)  + '/' + (endDate == null ? '-' : endDate.date) + '/' + (horarioIda || '-') + '/' + (horarioVolta || '-') + '/' + (tipoClasse || '-')  + '/' + (adultPassenger || 1) +'/'+ (childPassenger || 0) +'/'+ (infantPassenger || 0) +'/-/-/-/-'" name="button"><span>Pesquisar</span></a>
-    </div>
-  </div>
-  <!-- Close Search -->
-
-  <!-- Banner -->
-  <div class="banner">
-    <div class="banner__content">
-      <a href="" target="_blank" class="banner__link"> <amp-img src="#" width="768" height="90" alt="Publicidade" class="banner__link__img"></amp-img></a>
-      <amp-ad width=300 height=250 type="doubleclick" data-slot="/4119129/mobile_ad_banner" json='{"targeting":{"one2one_tipopagina":["amp"]}'>
-        <div fallback>
-          <p>Falha</p>
+                </div>
+            </fieldset>
         </div>
-      </amp-ad>
-    </div>
-  </div>
-  <!-- Close Banner -->
 
-  <!-- Footer -->
-  <footer class="footer">
-    <span class="copy">© 2018 ViajaNet Viagens Online - Todos os direitos reservados</span>
-  </footer>
-  <!-- Close Footer -->
-   <!--  The initial state and helper variables are configured by amp-state.-->
-   <amp-state id="autosuggest">
-    <script type="application/json">
-        {
-        "endpoint": "/resources/api/autocomplete/",
-        "emptyAndInitialTemplateJson": [{
+        <a class="search__button__submit" target="_self"
+          [href]="'/busca/voos-resultados#/'+ (origin_iata || 'SAO')  + '/' + (destination_iata || 'RIO') + '/RT/' + (startDate == null ? '-' : startDate.date)  + '/' + (endDate == null ? '-' : endDate.date) + '/' + (horarioIda || '-') + '/' + (horarioVolta || '-') + '/' + (tipoClasse || '-')  + '/' + (adultPassenger || 1) +'/'+ (childPassenger || 0) +'/'+ (infantPassenger || 0) +'/-/-/-/-'" name="button"><span>Pesquisar</span></a>
+    </div>
+    <!-- Close Search -->
+
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner__content">
+            <a href="" target="_blank" class="banner__link"> <amp-img src="#" width="768" height="90" alt="Publicidade" class="banner__link__img"></amp-img></a>
+        </div>
+    </div>
+    <!-- Close Banner -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <span class="copy">© 2018 ViajaNet Viagens Online - Todos os direitos reservados</span>
+    </footer>
+    <!-- Close Footer -->
+
+    <!--  The initial state and helper variables are configured by amp-state.-->
+    <amp-state id="autosuggest">
+        <script type="application/json">
+            {
+            "endpoint": "/resources/api/autocomplete/",
+            "emptyAndInitialTemplateJson": [{
             "query": "",
             "results": []
-        }]
-        }
-    </script>
-</amp-state>
+            }]
+            }
+        </script>
+    </amp-state>
 </body>
 </html>

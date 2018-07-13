@@ -77,13 +77,14 @@
                          showDropdown_origin: event.value.length < 3 ? '' : event.value
                        }),
                        autosuggest-list.show;
-                       tap:
+                      tap:
                        AMP.setState({
                         queryOrigin: queryOrigin == null ? '' : queryOrigin,
                         showDropdown_origin: true
                        }),
                        autosuggest-list.show"
                    [value]="origin_text || ''"
+                   value=""
                    required
                    autocomplete="off" />
                 </label>
@@ -98,14 +99,14 @@
                                 <amp-selector id="autosuggest-selector" keyboard-select-mode="focus" layout="container" on="
                                     select:
                                     AMP.setState({
-                                        origin_text: event.value,
-                                        origin_iata: event.targetOption,
+                                        origin_text: '{{Name}}',
+                                        origin_iata: '{{IATA}}',
                                         showDropdown_origin: false
                                     }),
                                     autosuggest-list.hide">
                                     {{#.}}
                                     <option class="select-option no-outline" role="option" 
-                                    tabindex="0" on="tap:autosuggest-list.hide" [value]="{{IATA}}">{{Name}}</option>
+                                    tabindex="0" on="tap:autosuggest-list.hide" option="{{Name}}">{{Name}}</option>
                                     {{/.}}
                                 </amp-selector>
                             </template>
@@ -135,6 +136,7 @@
                     }),
                     autosuggest-list.show"
                     [value]="destination_text || ''"
+                    value=""
                     required
                     autocomplete="off" />
                 </label>
@@ -149,17 +151,19 @@
                         on="
                         select:
                         AMP.setState({
-                          destination_text: event.targetOption,
-                          destination_iata: event.value,
+                          destination_text: '{{Name}}',
+                          destination_iata: '{{IATA}}',
                           showDropdown_origin: false
                         }),
                         autosuggest-list.hide">
                         {{#.}}
-                        <option class="select-option no-outline" role="option" tabindex="0" value=""
-                        on="tap:autosuggest-list.hide" [value]="IATA">{{Name}}</option>
+                        <option class="select-option no-outline" role="option" 
+                        tabindex="0" on="tap:autosuggest-list.hide" option="{{Name}}">{{Name}}</option>
                         {{/.}}
                       </amp-selector>
                     </template>
+                    <div placeholder>Carregando ...</div>
+                    <div fallback>Falha ao carregar a lista.</div>
                   </amp-list>
                   </div>
                 </div>

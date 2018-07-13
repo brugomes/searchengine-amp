@@ -63,14 +63,13 @@
                      input-debounced:
                        AMP.setState({
                          queryOrigin: event.value,
-                         showDropdown_origin: false,
-                         showDropdown_destination: false
+                         showDropdown_origin: event.value.length < 3 ? '' : event.value
                        }),
                        autosuggest-list.show;
                        tap:
                        AMP.setState({
-                        showDropdown_origin: false,
-                        showDropdown_destination: false
+                        queryOrigin: queryOrigin == null ? '' : queryOrigin,
+                        showDropdown_origin: true
                        }),
                        autosuggest-list.show"
                    [value]="origin_text || ''"
@@ -78,7 +77,7 @@
                    autocomplete="off" />
                 </label>
                 <div class="suggest">
-                    <div class="autosuggest-container hidden-origin" [class]="(showDropdown_origin == true) ?
+                    <div class="autosuggest-container hidden-origin" [class]="(showDropdown_origin && queryOrigin) ?
                         'autosuggest-container' :
                         'autosuggest-container hidden-origin'">
                         <amp-list class="autosuggest-box" layout="fixed-height" height="120" [src]="queryOrigin ?
@@ -90,8 +89,7 @@
                                     AMP.setState({
                                         origin_text: event.targetOption.split('|')[1],
                                         origin_iata: event.targetOption.split('|')[0],
-                                        showDropdown_origin: false,
-                                        showDropdown_destination: false
+                                        showDropdown_origin: false
                                     }),
                                     autosuggest-list.hide">
                                     {{#.}}

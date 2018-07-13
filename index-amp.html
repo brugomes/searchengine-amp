@@ -13,7 +13,118 @@
     }
   </style>
 </head>
-<body>
-  
+<body><!-- Header -->
+  <header class="header">
+    <img class="logo" src="https://www.viajanet.com.br/static/assets/platform/img/logo.svg;wac995548723fe915d" alt="ViajaNet" title="ViajaNet">
+  </header>
+  <!-- Close Header -->
+
+  <!-- Search -->
+  <div class="search">
+    <ul class="search__tab">
+      <li> <a href="#" class="search__tab__btn"> <span>Passagens Aéreas</span> </a> </li>
+    </ul>
+
+    <div class="search__container">
+      <img class="search__container__selo" alt="Selo de Garantia" src="https://www.viajanet.com.br/static/assets/platform/img/economia.png">
+
+      <fieldset class="search__group">
+        <form class="search__group__form" action="index.html" method="post">
+          <div class="section">
+            <strong class="section__title">Encontre os melhores preços e boa viagem!</strong>
+            <label class="section__lbl">
+              <input type="radio" tabindex="1" name="triptype" class="section__lbl__radio-option" id="iptRoundTrip" required>
+              <span>Ida e Volta</span>
+            </label>
+
+            <div class="travel">
+              <div class="travel__origin">
+                <label>
+                  <span>Origem</span>
+                  <input name="inptorigin" id="inptorigin" tabindex="2" type="text" required="" placeholder="Cidade ou aeroporto" maxlength="500">
+                </label>
+              </div>
+              <div class="travel__destination">
+                <label>
+                  <span>Destino</span>
+                  <input name="inptdestination" id="inptdestination" tabindex="3" type="text" required="" placeholder="Cidade ou aeroporto" maxlength="500">
+                </label>
+              </div>
+              <div class="travel__date">
+                <div class="travel__date--outbound">
+                  <label>
+                    <span>Data de Ida</span>
+                    <input name="departureDate" id="departureDate" tabindex="4" type="text" required placeholder="Data de Ida" maxlength="500">
+                  </label>
+                </div>
+
+                <div class="travel__date--inbound">
+                  <label>
+                    <span>Data de Volta</span>
+                    <input name="arrivalDate" id="arrivalDate" tabindex="5" type="text" required placeholder="Data de Volta" maxlength="500">
+                  </label>
+                </div>
+              </div>
+
+              <div class="travel__people">
+                <label class="travel__people__adults">
+                  <span>Adultos</span>
+                  <select id="drpAdultsQtd" name="adultPassenger" tabindex="6" required>
+                    <option value="">1 adulto</option>
+                    <option value="">2 adultos</option>
+                    <option value="">3 adultos</option>
+                    <option value="">4 adultos</option>
+                    <option value="">5 adultos</option>
+                  </select>
+                  <small>.</small>
+                </label>
+                <label class="travel__people__children">
+                  <span>Crianças</span>
+                  <select id="drpChildrenQtd" name="childPassenger" tabindex="7" required>
+                    <option value="">Nenhuma</option>
+                    <option value="">1 criança</option>
+                    <option value="">2 crianças</option>
+                    <option value="">3 crianças</option>
+                    <option value="">4 crianças</option>
+                  </select>
+                  <small>2 a 11 anos</small>
+                </label>
+                <label class="travel__people__babies">
+                  <span>Bebês</span>
+                  <select id="drpBabiesQtd" name="infantPassenger" tabindex="8" required>
+                    <option value="">Nenhum</option>
+                    <option value="">1 bebê</option>
+                    <option value="">2 bebês</option>
+                    <option value="">3 bebês</option>
+                    <option value="">4 bebês</option>
+                  </select>
+                  <small>0 a 23 meses</small>
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+
+    <div class="search__button">
+      <a class="search__button__submit" type="button" name="button"><span>Pesquisar</span></a>
+    </div>
+  </div>
+  <!-- Close Search -->
+
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner__content">
+      <a href="" target="_blank" class="banner__link"> <img src="#" alt="Publicidade" class="banner__link__img"> </a>
+    </div>
+  </div>
+  <!-- Close Banner -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span class="copy">© 2018 ViajaNet Viagens Online - Todos os direitos reservados</span>
+  </footer>
+  <!-- Close Footer -->
 </body>
 </html>
